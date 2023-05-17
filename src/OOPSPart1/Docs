@@ -1,0 +1,6 @@
+1-> So there's a distinction here I want to point out, between an uninitialized variable, and
+a variable with a null reference.An uninitialized variable, as we saw in the first instance,
+causes a compile time error.But a variable with a null reference can be used in code, without
+compiler errors, but will throw an exception at runtime.
+e.g OOPSPart1.Car car;  ->compile time error
+    OOPSPart1.Car car=null;  ->exception at runtime
