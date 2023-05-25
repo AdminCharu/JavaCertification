@@ -1,5 +1,6 @@
 package CodingExercises.Exercise32;
 
+
 public class WallAreaMain {
     public static void main(String[] args) {
         WallArea area=new WallArea(14,13);
@@ -7,11 +8,6 @@ public class WallAreaMain {
         test(area);
         byValue(123.0,123.999);
     }
-
-
-
-
-
 
 
 
