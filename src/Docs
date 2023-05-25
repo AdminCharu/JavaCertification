@@ -1,0 +1,55 @@
+1.So there's a distinction here I want to point out, between an uninitialized variable, and
+a variable with a null reference.An uninitialized variable, as we saw in the first instance,
+causes a compile time error.But a variable with a null reference can be used in code, without
+compiler errors, but will throw an exception at runtime.
+e.g OOPSPart1.Encapsulation.Car car;  ->compile time error
+    OOPSPart1.Encapsulation.Car car=null;  ->exception at runtime
+
+2.This and Super keywords
+  this: this is the reserved keyword in Java that can be used to invoke the constructors,
+        methods, static members, etc. of the current instance of a class.
+
+  super: super is the reserved keyword in Java that is used to invoke constructors
+         and methods of the parent class.This is possible only when one class inherits
+          another class (child class extends parent class).
+
+
+3.Overriding a method is when you create a method on a subclass, which has the same
+  signature as a method on a super class. Remember that a method signature consists
+  of the method name, and the number and types of parameters..
+  You override a parent class method, when you want the child class to show
+  different behavior for that method.
+
+4.Protected type field. What this modifier says is, let any class
+  that is a subclass, access this field. This is conditional encapsulation.
+  We're allowing some limited access, to our internal fields, and that's to subclasses.
+  Protected access also means that any classes in the same package, will also have access.
+
+5.Java has a class called Object
+This is because every class you create in Java,  intrinsically extends a special Java class.
+This class is named Object, and  it's in the java.lang package.There it is, this is a Class called Object.
+Class Object is the root of the class hierarchy. Every class has Object as a superclass.
+All objects, including arrays,  implement the methods of this class.
+Whether you knew it or not, your classes  were extending this class, Object.
+They all inherit from Object. And what that means is, all of your classes,
+have functionality built in that you can  use or override, the minute you create them.
+e.g.public class Main{} is by default -> public class Main extends Object{}
+
+6.If we print a object ref without declaring toString method it will print className followed
+by a hashcode
+Dog dog = new Dog();
+System.out.println(dog); -> If toString is not defined then className followed  by a hashcode will be printed.
+                            if it's defined then ref value which we want will be printed.
+
+7.String is immutable, each method call returns a new instance of a String.
+8.A static method can call only other static methods and can not call a non- static method from it.
+means:
+->public static void main(String[] args) --> cannot call -->public void printAboutStrings(String string)
+->public static void main(String[] args) --> can only call -->public static void printAboutStrings(String string)
+
+but a non static method or a instance method can call a static method.
+
+8.A StringBuilder is mutable, which means it can shrink, or grow, in size.By default, an empty StringBuilder starts out with a capacity of 16,
+ meaning it can contain up to 16 characters, before it needs to request more memory.In the second example, we created a StringBuilder with a
+ starting capacity of 32, which means our sequence can grow up to 32 characters, without needing to request additional allocation.
+ Every time a StringBuilder needs to increase capacity, the data stored in the original storage, needs to get copied over to the larger storage area.
